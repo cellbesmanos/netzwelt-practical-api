@@ -43,6 +43,6 @@ app.post("/api/Account/Signin", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}.`);
 });
