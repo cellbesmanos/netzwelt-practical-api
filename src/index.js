@@ -9,6 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+const PORT = process.env.PORT || 8080;
+
 app.get("/api/Teritories/All", async (req, res) => {
   try {
     const data = await axios.get(
@@ -42,5 +44,5 @@ app.post("/api/Account/Signin", async (req, res) => {
 });
 
 app.listen(3001, () => {
-  console.log("Server is listening to port 3001.");
+  console.log(`Server is listening to port ${PORT}.`);
 });
