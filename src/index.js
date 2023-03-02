@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: ["https://netzwelt-practical.netlify.app/Account/Login"],
+    origin: ["https://netzwelt-practical.netlify.app"],
     methods: ["GET", "POST"],
     credentials: true,
     preflightContinue: true,
