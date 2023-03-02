@@ -50,6 +50,10 @@ app.post("/api/Account/Signin", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Hello!" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}.`);
 });
