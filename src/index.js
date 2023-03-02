@@ -12,7 +12,6 @@ app.use(
     origin: ["https://netzwelt-practical.netlify.app"],
     methods: ["GET", "POST"],
     credentials: true,
-    preflightContinue: true,
     optionsSuccessStatus: 200,
   })
 );
