@@ -7,7 +7,15 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://netzwelt-practical.netlify.app/Account/Login"],
+    methods: ["GET", "POST"],
+    credentials: true,
+    preflightContinue: true,
+    optionsSuccessStatus: 200,
+  })
+);
 
 const PORT = process.env.PORT || 8080;
 
